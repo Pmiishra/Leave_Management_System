@@ -1,0 +1,112 @@
+<% include ./partial/header %>
+  <div class="lop" style="border:1px solid pink;">
+    <% if (locals.errors) { %>
+      <div class="alert alert-danger" role="alert" style="">
+        <% locals.errors.forEach(function(errors) { %>
+          <h5>
+            <%= errors.msg %>
+          </h5>
+
+          <% }); %>
+      </div>
+      <% } %>
+  </div>
+  <div class="container shadow"
+    style=" position: relative; border-radius: 5px; background-color: #f2f2f2; margin: 200px 400px 200px 400px ; padding: 60px 0 60px 0;width: 40%;">
+    <form action="/student/register" method="POST" style="margin: 0px auto;">
+      <div class="row">
+        <div class="col">
+          <h2 style=" text-align: center;  margin-bottom: 40px; color: gray;">
+            Register
+          </h2>
+          <div class="form-group form-inline">
+            <label for="name" style="width: 200px;display: inline-block;text-align: leftt;margin: 10px -20px 10px 20px ;">Name</label>
+            <input class="form-control" type="text" id="name" placeholder="name" name="name" style="float: left;text-align: left;" />
+          </div>
+          <!-- type -->
+          <div id="rates" class="form-group text-center" style="width: 400px;
+              display: inline-block;
+              text-align: right;
+              ">
+            <input class="mx-2" type="radio" id="r1" name="type" value="student" required/>
+            Student
+            <input class="mx-2" type="radio" id="r2" name="type" value="hod" required/>
+            HOD
+            <input class="mx-2" type="radio" id="r3" name="type" value="warden" required/>
+            Warden
+          </div>
+
+          <!-- id -->
+          <div class="form-group form-inline">
+            <label for="username" style="width: 200px;
+                  display: inline-block;
+                  text-align: leftt;margin: 10px -20px 10px 20px ;
+                  ">Username</label>
+            <input class="form-control" type="text" id="username" placeholder="username" name="username" />
+          </div>
+          <!-- password -->
+          <div class="form-group form-inline">
+            <label for="password" style="width: 200px;
+                  display: inline-block;
+                  text-align: leftt;margin: 10px -20px 10px 20px ;
+                  ">Password</label>
+            <input class="form-control" type="password" name="password" id="password" placeholder="password" />
+          </div>
+          <!-- confirm password -->
+          <div class="form-group form-inline">
+            <label for="cpassword" style="width: 200px;
+                  display: inline-block;
+                  text-align: leftt;margin: 10px -20px 10px 20px ;
+                  ">Confirm Password</label>
+            <input class="form-control" type="password" id="cpassword" name="password2"
+              placeholder="Confirm password" />
+          </div>
+          <!-- Department -->
+          <div class="form-group form-inline">
+            <label for="department" style="width: 200px;
+                  display: inline-block;
+                  text-align: leftt;margin: 10px -20px 10px 20px ;
+                  ">Department</label>
+            <!-- <label for="department">Department</label> -->
+            <input class="form-control" type="text" placeholder="Department" id="department" name="department" />
+          </div>
+          <!-- hostel -->
+          <div class="form-group form-inline">
+            <label for="hostel" style="width: 200px;
+                  display: inline-block;
+                  text-align: leftt;margin: 10px -20px 10px 20px ;
+                  ">Hostel</label>
+            <!-- <label for="hostel">Hostel</label> -->
+            <input class="form-control" type="text" name="hostel" id="hostel" placeholder="Hostel" />
+          </div>
+          <!-- image -->
+          <div class="form-group form-inline">
+            <label for="img" style="width: 200px;
+                  display: inline-block;
+                  text-align: leftt;margin: 10px -20px 10px 20px ;
+                  ">Image Url</label>
+            <input class="form-control" type="text" id="img" placeholder="img url" name="image" />
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn s_l_btn bg-dark" style="margin: 70px 180px 0px 180px;color: white; ">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- name -->
+    </form>
+
+    <a style="width: 100%;
+  padding: 10px;
+  color:gray;
+  border: none;
+  border-radius: 4px;
+  margin: 10px 220px 0px 220px;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 13px;
+  text-decoration: none;" href="/">Go Back</a>
+  </div>
+  <% include ./partial/footer %>

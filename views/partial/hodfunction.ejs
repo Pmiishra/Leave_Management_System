@@ -1,0 +1,46 @@
+<script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<h1 style="margin: 100px 60px 0px 60px; font-size: 20px; font-weight: bolder;display: inline-block; padding: 20px 30px; border-radius: 10px;" class="alert-success">Welcome, <%=hod.name%></h1>
+<div class="container">
+  <div
+    class="row"
+    style="    margin-left: -36px;
+  margin-right: 899px;"
+  >
+    <div class="col-sm-3" style="list-style-type: none;">
+      <li>
+        <a
+          href="/hod/home"
+          data-toggle="tooltip"
+          title="home page"
+          data-placement="left"
+          class="btn btn-gray bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px; color:white;"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/hod/<%=hod._id%>"
+          data-toggle="tooltip"
+          title="Click to see your profile"
+          data-placement="left"
+          class="btn btn-dark bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px; color: white;"
+          >Profile</a
+        >
+      </li>
+      <li>
+        <a
+          href="/hod/<%=hod._id%>/leave"
+          class="btn btn-dark bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px;color: white;"
+          >Leave</a
+        >
+      </li>
+    </div>
+  </div>
+</div>

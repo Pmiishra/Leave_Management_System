@@ -1,0 +1,50 @@
+<script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<h1 style="margin: 100px 75px 0px 75px; font-size: 20px; font-weight: bolder;display: inline-block; padding: 20px 25px; border-radius: 10px;" class="alert-success">Welcome, <%=warden.name%></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" style="list-style-type: none;">
+      <li>
+        <a
+          href="/warden/home"
+          data-toggle="tooltip"
+          title="home page"
+          data-placement="left"
+          class="btn btn-gray bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px; color:white;"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/warden/<%=warden._id%>"
+          data-toggle="tooltip"
+          title="Click to see your profile"
+          data-placement="left"
+          class="btn btn-gray bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px; color:white;"
+          >Profile</a
+        >
+      </li>
+      <li>
+        <a
+          href="/warden/<%=warden._id%>/leave"
+          class="btn btn-gray bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px; color:white;"
+          >Leave</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="btn btn-gray bg-dark btn-lg"
+          style="width: 210px;margin-top: 10px; color:white;"
+          >Track Leave</a
+        >
+      </li>
+    </div>
+  </div>
+</div>

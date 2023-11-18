@@ -1,0 +1,19 @@
+<% include ./partial/header %><% include ./partial/wardenfunction %>
+
+    <div class="col-sm-6" style="    flex: 0 0 50%;
+    max-width: 50%;
+    margin-left: 431px;
+    margin-top: -215px; text-align: -webkit-center;">
+      <div class="thumbnail mx-5 my-5" >
+        <img style="height:100px;width:100px;border-radius: 100%" src="<%=warden.image%>" />
+        <h1><strong style="text-align: left;">Name:</strong> <strong style="text-align: right;"><%=warden.name%></strong></h1>
+        <h4><strong style="text-align: left;">Username:</strong> <strong style="text-align: right;"><%=warden.username%></strong></h4>
+        <h4><strong style="text-align:left ;">Department:</strong><strong style="text-align: right;"><%=warden.department%></strong></h4>
+        <h4><strong style="text-align: left;">Type:</strong><strong style="text-align: right;"><%=warden.type%></strong></h4>
+      </div>
+      <a class="btn btn-dark bg-dark" style="margin: 10px 280px 30px 280px;color: white;"href="/warden/<%=warden._id%>/edit">Edit</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>
